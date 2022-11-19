@@ -1,31 +1,32 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-
 const production = {
     module: {
         rules: [
             {
-                test: /\.s?css$/i,
+                test: /\.css$/i,
                 use: [
                     {
+                        //style-loader injecte le CSS dans le head
+                        //
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
                             import: true,
                             sourceMap: true,
                         }
                     },
-                    "sass-loader",
                 ],
             },
             {
+                //règle fichier image
                 test: /\.(png|jpe?g|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'image/[name][ext]',
+                    filename: 'image/[name][ext]'
                 }
             },
             {
@@ -50,8 +51,8 @@ const production = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: './css/[name].css',
-        })
-    ]
+        }),
+    ],
 }
 
 module.exports = production;

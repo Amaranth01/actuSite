@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
         },
         output: {
             path: path.resolve(__dirname, 'public/build'),
-            filename: "./js/[name]-bundle.js",
+            filename: './js/[name]-bundle.js',
             publicPath: "/build/",
             clean: true,
         },
