@@ -8,3 +8,10 @@ html {
     font-size: 65.5%;
 }
 
+.dark {
+    background-color: #252323;
+}
+
+.light {
+    background-color: #d2cfcf;
+}
