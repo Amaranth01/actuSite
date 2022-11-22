@@ -13,8 +13,8 @@ export const SwitchTheme = function () {
                 darkMode.modeDark();
                 // if it has been enabled, turn it off
             } else {
-                let ligthMode = new LigthMode();
-                ligthMode.modeLight();
+                let lightMode = new LightMode();
+                lightMode.modeLight();
             }
         });
     }
@@ -28,7 +28,7 @@ const DarkMode = function () {
     }
 }
 
-const LigthMode = function () {
+const LightMode = function () {
     this.modeLight = () => {
         body.className = "light";
         localStorage.setItem('switchMode', null);
