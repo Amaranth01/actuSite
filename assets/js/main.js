@@ -10,3 +10,4 @@ darkTheme.themeSwitch();
 
 let news = new News();
 news.initJson();
+
